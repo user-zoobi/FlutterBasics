@@ -28,10 +28,12 @@ class _SIFormState extends State<SIForm>{
         title: Text("Simple Text Calculator"),
       ),
       body: Container(
+
         child: Column(
           children: <Widget>[
 
             getImageAssets(),
+
             Padding(
 
               padding: EdgeInsets.only(
@@ -79,54 +81,8 @@ class _SIFormState extends State<SIForm>{
                   ),
                 )),
 
-                Container(width: minimumPadding*5,),
-
-                Expanded(
-                  child: DropdownButton<String>(
-                    items: _currencies.map((String value){
-                      return DropdownMenuItem<String>(
-                          child: Text(value)
-                      );
-                    }).toList(),
-
-                    value: "Rupees",
-                    onChanged: (String newValueSelected)
-                    {
-
-                    },
-                  ),)
               ],
             )),
-
-            Padding(
-                padding: EdgeInsets.only(
-                  bottom: minimumPadding, top: minimumPadding
-                ),
-              child: Row(children: <Widget>[
-
-              Expanded(
-                child: RaisedButton(
-                    child: Text("Calculate"),
-                    onPressed:(){
-
-                    }
-                ),
-              )
-              ,
-              Expanded(
-                child: RaisedButton(
-                    child: Text("Reset"),
-                    onPressed:(){
-
-                    }
-                ),
-              )
-
-            ],)),
-
-            Padding(padding: EdgeInsets.all(minimumPadding * 2),
-            child: Text("Todo Text"),
-            )
 
           ],
         ),
